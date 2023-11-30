@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  position: relative;
+  justify-content: center;
+  display: flex;
+  min-height: 100vh;
+  background-color: rgb(201, 241, 253);
+  flex-direction: column;
+  align-items: center;
+  font-family: "Space Mono", monospace;
+}
+
+.splitter {
+  color: rgb(46, 80, 85);
+  font-size: 26px;
+}
+.splitter:nth-child(2) {
+  margin-bottom: 60px;
+}
+
+.calculator {
+  min-width: 840px;
+  max-height: 450px;
+  background-color: white;
+  border-radius: 15px;
+}
+.calculator .content {
+  padding: 5%;
+  display: flex;
+}
+.calculator .content .result-tip, .calculator .content .calc-buttons {
+  width: 50%;
+}
+.calculator .content .calc-buttons {
+  margin-right: 10px;
+}
+.calculator .content .calc-buttons p {
+  color: rgb(100, 109, 109);
+}
+.calculator .content .calc-buttons .num-value {
+  width: 100%;
+  background-color: rgb(240, 239, 239);
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+.calculator .content .calc-buttons .num-value h3 {
+  color: rgb(125, 139, 170);
+}
+.calculator .content .calc-buttons .num-value img {
+  width: 15px;
+  margin-left: 4px;
+  margin-top: 2px;
+  height: 25px;
+}
+.calculator .content .calc-buttons .percent {
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.calculator .content .calc-buttons .percent .btn-green {
+  padding: 12px;
+  margin: 10px;
+  border: none;
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  font-size: 20px;
+  font-family: "Space Mono", monospace;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.calculator .content .calc-buttons .percent .btn-green:nth-child(1), .calculator .content .calc-buttons .percent .btn-green:nth-child(4) {
+  margin-left: 0px;
+}
+.calculator .content .calc-buttons .percent .btn-green:nth-child(3) {
+  margin-right: 0px;
+}
+.calculator .content .calc-buttons .percent .btn-custom {
+  padding: 12px;
+  margin: 10px;
+  margin-right: 0px;
+  border: none;
+  font-size: 20px;
+  border-radius: 5px;
+  font-family: "Space Mono", monospace;
+  color: hsl(186, 14%, 43%);
+  cursor: pointer;
+}
+.calculator .content .result-tip {
+  background-color: hsl(183, 100%, 15%);
+  margin-left: 10px;
+  border-radius: 5px;
+}
+.calculator .content .result-tip .content-2 {
+  padding: 8%;
+  display: flex;
+  flex-direction: column;
+}
+.calculator .content .result-tip .content-2 .tip-amount {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.calculator .content .result-tip .content-2 .tip-amount:nth-child(1) {
+  margin-top: 20px;
+}
+.calculator .content .result-tip .content-2 .tip-amount .p-tip {
+  color: white;
+  font-size: 13px;
+}
+.calculator .content .result-tip .content-2 .tip-amount .p-tip p {
+  color: rgb(170, 169, 169);
+}
+.calculator .content .result-tip .content-2 .tip-amount h1 {
+  color: hsl(183, 36%, 47%);
+}
+.calculator .content .result-tip .content-2 button {
+  padding: 12px;
+  border: none;
+  background-color: hsl(183, 67%, 25%);
+  font-family: "Space Mono", monospace;
+  color: hsl(183, 67%, 19%);
+  font-size: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=App.css.map */

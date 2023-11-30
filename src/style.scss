@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App{
+    position: relative;
+    justify-content: center;
+    display: flex;  
+    min-height: 100vh;
+    background-color: rgb(201, 241, 253);
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Space Mono', monospace;
+}
+
+.splitter{
+    color: rgb(46, 80, 85);
+    font-size: 26px;
+    
+    &:nth-child(2){
+        margin-bottom: 60px;
+    }
+}
+
+.calculator{
+    min-width: 840px;
+    max-height: 450px;
+    background-color: white;
+    border-radius: 15px;
+
+    .content{
+        padding: 5%;
+        display: flex;
+
+        .result-tip, .calc-buttons{
+            width: 50%;
+        }
+
+        .calc-buttons{
+            margin-right: 10px;
+
+            p{
+                color: rgb(100, 109, 109)
+            }
+
+            .num-value{
+                width: 100%;
+                background-color: rgb(240, 239, 239);
+                display: flex;
+                justify-content: space-between;
+                padding: 5px;
+                border-radius: 5px;
+                margin-bottom: 15px;
+                margin-top: 5px;
+
+                h3{
+                    color: rgb(125, 139, 170);
+                }
+
+                img{
+                    width: 15px;
+                    margin-left: 4px;
+                    margin-top: 2px;
+                    height: 25px;
+                }
+            }
+
+            .percent{
+                grid-template-columns: 1fr 1fr 1fr;
+                display: grid;
+                margin-top: 5px;
+                margin-bottom: 15px;
+
+                .btn-green{
+                    padding: 12px;
+                    margin: 10px;
+                    border: none;
+                    background-color: hsl(183, 100%, 15%);
+                    color: white;
+                    font-size: 20px;
+                    font-family: 'Space Mono', monospace;
+                    border-radius: 5px;
+                    cursor: pointer;
+
+                    &:nth-child(1), &:nth-child(4){
+                        margin-left: 0px;
+                    }
+
+                    &:nth-child(3){
+                        margin-right: 0px;
+                    }
+                }
+
+                .btn-custom{
+                    padding: 12px;
+                    margin: 10px;
+                    margin-right: 0px;
+                    border: none;
+                    font-size: 20px;
+                    border-radius: 5px;
+                    font-family: 'Space Mono', monospace;
+                    color: hsl(186, 14%, 43%);
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .result-tip{
+            background-color: hsl(183, 100%, 15%);
+            margin-left: 10px;
+            border-radius: 5px;
+
+            .content-2{
+                padding: 8%;
+                display: flex;
+                flex-direction: column;
+
+                .tip-amount{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 50px;
+
+                    &:nth-child(1){
+                        margin-top: 20px;
+                    }
+
+                    .p-tip{
+                        color: white;
+                        font-size: 13px;
+
+                        p{
+                            color: rgb(170, 169, 169);
+                        }
+                    }
+
+                    h1{
+                        color: hsl(183, 36%, 47%);
+                    }
+                }
+
+                button{
+                    padding: 12px;
+                    border: none;
+                    background-color: hsl(183, 67%, 25%);
+                    font-family: 'Space Mono', monospace;
+                    color: hsl(183, 67%, 19%);
+                    font-size: 20px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
