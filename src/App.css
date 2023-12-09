@@ -18,10 +18,11 @@
 
 .splitter {
   color: rgb(46, 80, 85);
-  font-size: 26px;
+  font-size: 15px;
+  margin-top: 20px;
 }
-.splitter:nth-child(2) {
-  margin-bottom: 60px;
+.splitter h1:nth-child(2) {
+  margin-bottom: 40px;
 }
 
 .calculator {
@@ -43,28 +44,57 @@
 .calculator .content .calc-buttons p {
   color: rgb(100, 109, 109);
 }
+.calculator .content .calc-buttons .people-value {
+  display: flex;
+  justify-content: space-between;
+}
+.calculator .content .calc-buttons .people-value .people-error-value {
+  color: rgb(245, 119, 73);
+  display: none;
+}
+.calculator .content .calc-buttons .people-value .people-error-value.error-appear {
+  display: block;
+}
 .calculator .content .calc-buttons .num-value {
   width: 100%;
   background-color: rgb(240, 239, 239);
   display: flex;
   justify-content: space-between;
-  padding: 5px;
+  padding: 2px;
   border-radius: 5px;
   margin-bottom: 15px;
   margin-top: 5px;
 }
+.calculator .content .calc-buttons .num-value.error-orange-appear {
+  border: 1px solid orangered;
+}
+.calculator .content .calc-buttons .num-value .value-top {
+  width: 90%;
+  background-color: rgb(240, 239, 239);
+  direction: ltr;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-family: "Space Mono", monospace;
+  color: hsl(183, 100%, 15%);
+  text-align: right;
+}
 .calculator .content .calc-buttons .num-value h3 {
   color: rgb(125, 139, 170);
+  margin-left: 10px;
+  font-size: 25px;
 }
 .calculator .content .calc-buttons .num-value img {
   width: 15px;
-  margin-left: 4px;
-  margin-top: 2px;
-  height: 25px;
+  margin: 9px;
+  height: 20px;
+}
+.calculator .content .calc-buttons .num-value:hover {
+  border: 1px solid rgb(37, 203, 209);
 }
 .calculator .content .calc-buttons .percent {
-  grid-template-columns: 1fr 1fr 1fr;
   display: grid;
+  grid-template-columns: repeat(3, 120px);
   margin-top: 5px;
   margin-bottom: 15px;
 }
@@ -85,9 +115,14 @@
 .calculator .content .calc-buttons .percent .btn-green:nth-child(3) {
   margin-right: 0px;
 }
+.calculator .content .calc-buttons .percent .btn-green:hover {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 68%, 22%);
+}
 .calculator .content .calc-buttons .percent .btn-custom {
   padding: 12px;
   margin: 10px;
+  background-color: rgb(245, 245, 245);
   margin-right: 0px;
   border: none;
   font-size: 20px;
@@ -95,6 +130,16 @@
   font-family: "Space Mono", monospace;
   color: hsl(186, 14%, 43%);
   cursor: pointer;
+  direction: ltr;
+  border: none;
+  outline: none;
+  text-align: right;
+}
+.calculator .content .calc-buttons .percent .btn-custom:hover {
+  border: 1px solid hsl(172, 67%, 45%);
+}
+.calculator .content .calc-buttons .percent .btn-custom::placeholder {
+  margin-left: 5px;
 }
 .calculator .content .result-tip {
   background-color: hsl(183, 100%, 15%);
@@ -133,6 +178,77 @@
   font-size: 20px;
   margin-top: 20px;
   cursor: pointer;
+}
+.calculator .content .result-tip .content-2 button:hover {
+  background-color: hsl(172, 67%, 45%);
+}
+
+@media screen and (max-width: 1024px) {
+  .calculator {
+    min-width: 740px;
+  }
+  .calculator .content .calc-buttons .percent {
+    grid-template-columns: repeat(3, 110px);
+  }
+}
+@media screen and (max-width: 768px) {
+  h1:nth-child(1) {
+    margin-top: 40px;
+  }
+  h1:nth-child(2) {
+    margin-bottom: 30px !important;
+  }
+  .calculator {
+    width: 100%;
+    min-width: 0px;
+    min-height: 100vh;
+  }
+  .calculator .content {
+    flex-direction: column;
+  }
+  .calculator .content .result-tip, .calculator .content .calc-buttons {
+    width: 100%;
+  }
+  .calculator .content .result-tip {
+    margin-left: 0px;
+  }
+  .calculator .content .result-tip .tip-amount .p-tip h4 {
+    font-size: 19px;
+  }
+  .calculator .content .result-tip .tip-amount .p-tip p {
+    font-size: 17px;
+  }
+  .calculator .content .result-tip .tip-amount h1 {
+    font-size: 35px;
+  }
+  .calculator .content .calc-buttons p {
+    font-size: 19px;
+  }
+  .calculator .content .calc-buttons .num-value {
+    padding: 8px;
+  }
+  .calculator .content .calc-buttons .percent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .calculator .content .calc-buttons .percent .btn-custom {
+    width: 95%;
+  }
+  .calculator .content .calc-buttons .percent .btn-custom::placeholder {
+    text-align: center;
+  }
+  .calculator .content .calc-buttons .percent .btn-green {
+    width: 95%;
+  }
+  .calculator .content .calc-buttons .percent .btn-green:nth-child(1) {
+    margin-left: 0px;
+  }
+  .calculator .content .calc-buttons .percent .btn-green:nth-child(4) {
+    margin-left: 10px;
+  }
+  .calculator .content .calc-buttons .percent .btn-green:nth-child(3), .calculator .content .calc-buttons .percent .btn-green:nth-child(5) {
+    margin-left: 0px;
+    margin-right: 10px;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */
